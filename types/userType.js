@@ -1,20 +1,20 @@
 import { GraphQLObjectType, GraphQLSchema, GraphQLList, GraphQLString, GraphQLInt } from "graphql"
 import postType from "./postType.js"
-import posts from '../data/posts.js';
+import Post from "../models/post.js";
 
 const userType = new GraphQLObjectType({
     name: "UserType",
     description: "This is a Schema for User",
     fields: () => {
         return {
-            id: { type: GraphQLInt },
+            id: { type: GraphQLString },
             name: { type: GraphQLString },
             email: { type: GraphQLString },
             username: { type: GraphQLString },
             posts: {
                 type: GraphQLList(postType),
                 resolve: (user) => {
-                    return posts.filter(post => post.userId === user.id)
+                    return Post.find({ userId: user.id })
                 }
             }
         }
