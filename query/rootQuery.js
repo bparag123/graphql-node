@@ -4,6 +4,9 @@ import postType from "../types/postType.js"
 import Post from "../models/post.js"
 import User from "../models/user.js"
 
+/**This is a main Query Setup
+ * These Fields are available for the client to get Data
+ */
 const query = new GraphQLObjectType({
     name: "rootQuery",
     description: "This is a Root Query For Users and Posts",

@@ -2,6 +2,7 @@ import { GraphQLInt, GraphQLObjectType, GraphQLString } from "graphql";
 import userType from "../types/userType.js";
 import User from "../models/user.js";
 
+/**This is a Defination for Creating User*/
 const userMutation = {
     name: "user",
     description: "Create a New User",

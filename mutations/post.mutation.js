@@ -2,6 +2,7 @@ import { GraphQLString } from 'graphql';
 import postType from "../types/postType.js"
 import Post from '../models/post.js';
 
+/**This is a Defination for Creating Post*/
 const postMutation = {
     type: postType,
     name: "post",

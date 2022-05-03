@@ -2,6 +2,7 @@ import { GraphQLObjectType, GraphQLSchema, GraphQLList, GraphQLString, GraphQLIn
 import postType from "./postType.js"
 import Post from "../models/post.js";
 
+/**This is a Basic Schema which client can access data accordingly*/
 const userType = new GraphQLObjectType({
     name: "UserType",
     description: "This is a Schema for User",
